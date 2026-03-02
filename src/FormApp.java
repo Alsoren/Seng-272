@@ -1,16 +1,17 @@
-import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
 
-public class ProjectFormApp {
+public class FormApp {
+
     public static void main(String[] args) {
-
         SwingUtilities.invokeLater(() -> {
+
             JFrame frame = new JFrame("Software Project Registration Form");
-            frame.setSize(500, 450);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-            frame.add(new ProjectFormPanel());
+            frame.setContentPane(new PanelForm());
 
+            frame.setSize(520, 420);
+            frame.setLocationRelativeTo(null);
             frame.setVisible(true);
         });
     }
